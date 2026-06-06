@@ -1,0 +1,26 @@
+.venv/
+.venv_fasterrvit/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.idea/
+
+# Large model and training artifacts
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+save_model/
+repro_outputs/4gpu_train/checkpoints/
+
+# Large raw datasets
+VOCdevkit/VOC2007/JPEGImages/
+VOCdevkit/local/
+VOCdevkit/results/
+
+# Runtime/cache files
+repro_outputs/matplotlib_cache/
+*.tmp
+*.swp

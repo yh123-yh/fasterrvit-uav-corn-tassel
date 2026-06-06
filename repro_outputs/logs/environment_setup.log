@@ -1,0 +1,37 @@
+2026-06-06 18:13-18:26 UTC
+
+Created project virtual environment:
+  .venv_fasterrvit
+
+Base interpreter:
+  /home/o_mabin/miniconda/envs/nns/bin/python
+
+Reason:
+  The system python3 did not include torch. Existing conda environments had torch but missed torchvision.
+  A project-local venv was created with --system-site-packages, then project dependencies were installed into it.
+
+Install command:
+  .venv_fasterrvit/bin/python -m pip install torchvision==0.17.0 scikit-image tqdm fire matplotlib ipdb torchnet visdom einops python-docx defusedxml
+
+Key runtime packages:
+  Python 3.10.20
+  torch 2.2.0+cu121
+  torchvision 0.17.0+cu121
+  scikit-image 0.25.2
+  matplotlib 3.10.8
+  python-docx 1.2.0
+
+CUDA note:
+  nvidia-smi can see 4 A100 GPUs on the host, but torch.cuda.is_available() is false inside this venv/sandbox run.
+  Reproduction scripts therefore ran on CPU and recorded that fact in reproduction_summary.json.
+
+One-step train smoke:
+  rpn_loc_loss=2.641688108444214
+  rpn_cls_loss=0.6981668472290039
+  roi_loc_loss=1.5350521209711587e-07
+  roi_cls_loss=0.675297737121582
+  total_loss=4.015152931213379
+
+Visdom note:
+  A Visdom localhost connection warning appeared during the one-step train smoke because no visdom server was reachable in the sandbox.
+  The training step still completed and returned losses.

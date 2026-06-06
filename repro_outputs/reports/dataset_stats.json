@@ -1,0 +1,24 @@
+{
+  "voc_dir": "/home/o_mabin/LLM/nnscaler-clj/gem5/fasterrvit/simple/VOCdevkit/VOC2007",
+  "annotation_files": 320,
+  "image_files": 320,
+  "trainval_count": 160,
+  "test_count": 159,
+  "label_names": [
+    "pith"
+  ],
+  "label_counts": {
+    "pith": 9437
+  },
+  "objects_total": 9437,
+  "objects_per_image_min": 1,
+  "objects_per_image_mean": 29.490625,
+  "objects_per_image_max": 84,
+  "image_width_min": 3456,
+  "image_width_max": 4272,
+  "image_height_min": 2304,
+  "image_height_max": 2848,
+  "missing_images": [
+    "334.jpg"
+  ]
+}

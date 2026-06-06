@@ -1,0 +1,5 @@
+rank=1
+local_rank=1
+world_size=4
+cuda_device=NVIDIA A100 80GB PCIe
+steps_per_epoch=40
