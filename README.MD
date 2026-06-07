@@ -1,16 +1,14 @@
-# A Simple and Fast Implementation of Faster R-CNN
+# Faster R‑ViT UAV Corn Tassel Detection System (Full Implementation)
 
 ## 1. Introduction
 
-**[Update:]** I've further simplified the code to pytorch 1.5, torchvision 0.6, and replace the customized ops roipool and nms with the one from torchvision.  if you want the old version code, please checkout branch [v1.0](https://github.com/chenyuntc/simple-faster-rcnn-pytorch/tree/v1.0)
+This project implements a complete corn tassel detection and intelligent UAV field inspection system. Core contributions include:
 
+Faster R‑ViT Hybrid Architecture: Faster R‑CNN with Vision Transformer (ViT) backbone, incorporating Focal Loss, multi‑scale FPN, contrastive learning constraints (DN‑FPN), and a Trans R‑CNN detection head, significantly improving small‑target (tassel) detection accuracy.
 
+Complex UAV Path Planning: Formulating the field coverage task as a TSP with row‑structure constraints, solving inter‑row order with Ant Colony Optimization (ACO), smoothing trajectories with Dubins curves, and integrating A* for global obstacle avoidance and D Lite* for local dynamic replanning – achieving efficient, smooth, and real‑time adjustable inspection routes.
 
-This project is a **Simplified** Faster R-CNN implementation based on [chainercv](https://github.com/chainer/chainercv) and other [projects](#acknowledgement) . I hope it can serve as an start code for those who want to know the detail of Faster R-CNN.  It aims to:
-
-- Simplify the code (*Simple is better than complex*)
-- Make the code more straightforward (*Flat is better than nested*)
-- Match the performance reported in [origin paper](https://arxiv.org/abs/1506.01497) (*Speed Counts and mAP Matters*)
+The system supports 4‑GPU distributed training, provides complete data processing, model evaluation, and route visualization tools, and has been validated on real corn seed production fields.
 
 And it has the following features:
 - It can be run as pure Python code, no more build affair. 
@@ -176,22 +174,11 @@ you may open browser, visit `http://<ip>:8097` and see the visualization of trai
 
   I don't have windows machine with GPU to debug and test it. It's welcome if anyone could make a pull request and test it.
 
-
-
-## Acknowledgement
-This work builds on many excellent works, which include:
-
-- [Yusuke Niitani's ChainerCV](https://github.com/chainer/chainercv) (mainly)
-- [Ruotian Luo's pytorch-faster-rcnn](https://github.com/ruotianluo/pytorch-faster-rcnn) which based on [Xinlei Chen's tf-faster-rcnn](https://github.com/endernewton/tf-faster-rcnn)
-- [faster-rcnn.pytorch by Jianwei Yang and Jiasen Lu](https://github.com/jwyang/faster-rcnn.pytorch).It mainly refer to [longcw's faster_rcnn_pytorch](https://github.com/longcw/faster_rcnn_pytorch)
-- All the above Repositories have referred to [py-faster-rcnn by Ross Girshick and Sean Bell](https://github.com/rbgirshick/py-faster-rcnn)  either directly or indirectly. 
-
 ## ^_^
-Licensed under MIT, see the LICENSE for more detail.
 
 Contribution Welcome.
 
-If you encounter any problem, feel free to open an issue, but too busy lately.
+If you encounter any problem, feel free to open an issue.
 
 Correct me if anything is wrong or unclear.
 
