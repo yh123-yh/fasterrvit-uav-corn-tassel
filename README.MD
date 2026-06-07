@@ -21,7 +21,6 @@ And it has the following features:
 ![img](imgs/faster-speed.jpg)
 
 
-
 ## 2. Performance
 
 ### 2.1 mAP
